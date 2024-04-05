@@ -1,0 +1,78 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{arcs}
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage[left=3cm,right=3cm,top=3cm,bottom=3cm]{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage{stackrel}
+\usepackage{xcolor}
+
+\begin{document}
+\pagestyle{empty}
+\normalsize
+\section{Матанализ от Виноградова}
+\subsection{}
+{\bf Определение.} Ряд вида
+$$\sum\limits_{k=0}^{\infty}c_k(z-z_0)^k,$$
+где $c_k,z,z_0\in \mathbb{C}$, называется \textit{степенным рядом}. Числа $c_k$ называются его \textit{коэффициентами}, а $z_0$ - центром. Если $a_k,x,x_0\in \mathbb{R}$, то ряд
+$$\sum\limits_{k=0}^{\infty}a_k(x-x_0)^k$$
+называется \textit{вещественным степенным рядом.}
+\subsection{}
+Норма в пространстве $L_p(E,\mu)$ равна:
+$$||f||_{ L_p(E,\mu)}=\left(\int_E|f|^pd\mu\right)^{\frac{1}{p}}$$
+\hspace{0.5cm}Положительная однородность очевидна, неравенству треугольника соответствует неравенство Минковского, а из $\displaystyle||f||=0$ следует $\displaystyle f\sim 0$, то есть $f=0$ как элемент $L_p(E,\mu)$.
+
+Пусть $(X,\mathbb{A},\mu)$ {\textemdash} пространство с мерой, $E \in \mathbb{A}$. Полагают:
+$$ L_{\infty}(E,\mu)=\left\{
+\begin{array}{c}
+     f \text{ п.в. } E\rightarrow \overline{\mathbb{R}} \text{ (или } \overline{\mathbb{C}}),\\
+     f \text{ измерима},\\
+     \text{ess } \sup\limits_{x\in E} |f(x)|<+\infty
+\end{array}
+\right\}$$
+\hspace{0.5cm}Эквивалентные функции отождествляются.\hspace{0.1cm}Легко видеть, что\hspace{0.1cm}$L_{\infty}(E,\mu)$ {\textemdash} векторное пространство. Норма в $L_{\infty}(E,\mu)$ задаётся равенством:
+$$\displaystyle ||f||_{L_{\infty}(E,\mu)}=\text{ess }\displaystyle \sup\limits_{x\in E} |f(x)|$$
+\section{Большое задание от доктора Тренча}
+\subsection{}
+$$(s^2-2s-3)Y(s)=\frac{10s}{s^2+1}+(7+2s)-4=\frac{10s}{s^2+1}+(2s+3).$$
+Since $s^2-2s-3=(s-3)(s+1)$,
+$$\hspace{4.15cm}Y(s)=\frac{10s}{(s-3)(s+1)(s^2+1)}+\frac{2s+3}{(s-3)(s+1)}.\text{\hspace{3.85cm}(A)}$$
+$$\hspace{3.9cm}\frac{2s+3}{(s-3)(s+1)}=\frac{9}{4}\frac{1}{s-3}-\frac{1}{4}\frac{1}{s+1}\leftrightarrow\frac{9}{4}e^{3t}-\frac{1}{4}e^{-t}.\text{\hspace{3.7cm}(B)}$$
+$$\frac{10s}{(s-3)(s+1)(s^2+1)}=\frac{A}{s-3}+\frac{B}{s+1}+\frac{Cs+D}{s^2+1}$$
+\\
+\\
+\\
+where
+$$(A(s+1)+B(s-3))(s^2+1)+(Cs+D)(s-3)(s+1)=10s.$$
+$$
+\begin{array}{rcrl}
+     40A&=&30&\text{(set }s=3);\\
+     -8B&=&-10&\text{(set }s=-1);\\
+     A-3B-3D&=&0&\text{(set }s=0);\\
+     A+B+C&=&0&\text{(equate coefficients of }s^3).
+\end{array}
+$$
+Solving this system yields $A=3/4$, $B=5/4$, $C=-2$, $D=-1$. Therefore,
+$$
+\begin{array}{ccl}
+\displaystyle \frac{10s}{(s-3)(s+1)(s^2+1)}&\displaystyle=&\displaystyle\frac{3}{4}\frac{1}{s-3}+\frac{5}{4}\frac{1}{s+1}-\frac{2s+1}{s^2+1}\\
+ \displaystyle&\displaystyle\leftrightarrow&\displaystyle\frac{3}{4}e^{3t}+\frac{5}{4}e^{-t}-2\cos t - \sin t.
+\end{array}
+$$
+From this, (A), and (B), $y = -\sin t - 2\cos t + 3e^{3t}+e^{-t}$.
+\section{Маленькие задания от доктора Тренча}
+\subsection{}
+$\displaystyle\sinh at \leftrightarrow\frac{a}{s^2-a^2}\text{ and } \cosh at \leftrightarrow \frac{1}{s^2-a^2}\text{, so }H(s)=\frac{as}{(s^2-a^2)^2}.$
+\subsection{}
+$\displaystyle e^t \leftrightarrow\frac{1}{s-1}\text{ and } \sin at \leftrightarrow \frac{a}{s^2+a^2}\text{, so }H(s)=\frac{a}{(s-1)(s^2+a^2)}.$
+\subsection{}
+$\displaystyle t^3 \leftrightarrow\frac{6}{s^4}\text{ and } e^t \leftrightarrow \frac{1}{s-1}\text{, so }H(s)=\frac{6}{s^4(s-1)}.$
+\end{document}
